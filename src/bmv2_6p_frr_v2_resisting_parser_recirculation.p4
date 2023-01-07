@@ -6,21 +6,7 @@ parser MyParser(
       out headers hdr,
       inout metadata ig_md,
       inout standard_metadata_t ig_intr_md) {
-/*
-     state start {
-//        pkt.extract(hdr.frr);
-      
-      transition select(ig_intr_md.ingress_port) {
-        //transition select(ig_intr_md.recirculate_port) {   
-//        transition select (ig_intr_md.egress_spec) {
 
-         10 : parse_frr;
-         7  : parse_ethernet;
-         default:  accept;       
-       }
-    }
-
-*/
 
 
       state start { 
@@ -31,14 +17,11 @@ parser MyParser(
 
 
       state parse_ethernet {
-          pkt.extract(hdr.ethernet);
-          //pkt.extract(hdr.frr);
+          pkt.extract(hdr.ethernet);      
           ig_md.dst_id = (bit<16>)hdr.ethernet.dst_addr;
           transition select (hdr.ethernet.ether_type) {
                0x800 : parse_ipv4;
-                    TYPE_FRR: parse_frr;
- //                  1 : parse_frr; 
-//                     0x86dd: parser_ipv6;
+               TYPE_FRR: parse_frr;
                default : accept;
            }
        }
