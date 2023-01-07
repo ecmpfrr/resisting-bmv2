@@ -3,7 +3,6 @@
 #INGRES##########
 ################
 
-#ipv4_lpm.add_with_set_nhop_local(0x800,'25','10.0.0.11',32,'001b:21a0:52d4','136')
 
 table_add ipv4_lpm set_nhop_local 0x800 1 10.0.0.11/32 => 00:00:00:00:00:01 7
 table_add ipv4_lpm set_nhop_local 0x800 2 10.0.0.11/32 => 00:00:00:00:00:01 7
@@ -12,7 +11,6 @@ table_add ipv4_lpm set_nhop_local 0x800 4 10.0.0.11/32 => 00:00:00:00:00:01 7
 table_add ipv4_lpm set_nhop_local 0x800 5 10.0.0.11/32 => 00:00:00:00:00:01 7
 table_add ipv4_lpm set_nhop_local 0x800 6 10.0.0.11/32 => 00:00:00:00:00:01 7
 
-#ipv4_lpm.add_with_set_nhop_network(0x800,'136','20.0.0.12',32,'20')
 
 table_add ipv4_lpm set_nhop_network 0x800 7 20.0.0.0/8 =>  20
 
@@ -24,12 +22,9 @@ table_add ipv4_lpm set_nhop_network 0x800 0 30.0.0.0/8 =>  30
 
 
 
-#ipv4_lpm.add_with_drop_act(0x800,'128','0.0.0.0',0)
-
 table_add ipv4_lpm drop_act 0x800 1 0.0.0.0/0 =>
 
  
-#rg_port_out_5.add(0,182)
 register_write rg_port_out_5_wr 0 6
 register_write rg_port_out_4_wr 0 5
 register_write rg_port_out_3_wr 0 4
@@ -39,7 +34,6 @@ register_write rg_port_out_0_wr 0 1
 
 register_write rg_default_path_wr 0 1
 
-#update_port_out_5.add_with_set_add_port_out_5(5,1)
 #S2
 table_add update_port_out_5 set_add_port_out_5_loop_bit_1 5 1 20 => 0
 table_add update_port_out_5 set_add_port_out_5_loop_bit_1 4 1 20 => 0
@@ -115,7 +109,6 @@ table_add fowarding_tag_1 set_fowarding_port_out_1_loop_bit_0 30 1 0 => 0
 table_add fowarding_tag_0 set_fowarding_port_out_0_loop_bit_0 30 0 0 => 0
 
 
-#table_add default_path set_default_path_loop_bit_0 255 0 => 0
 table_add default_path set_default_path_loop_bit_0 255 0->5 0 20 => 0 0
 table_add default_path set_default_path_loop_bit_0 255 0->5 0 30 => 0 0
 
@@ -134,10 +127,6 @@ table_add port_status set_port_status_down 0 1 0x255 => 0
 
 table_set_default port_status drop_act
 
-#table_add frr_recirculation set_frr_recirculation_first_failure_loop_bit_0 1 0 =>
-#table_add frr_recirculation set_frr_recirculation_first_failure_loop_bit_1 0 1 =>
-#table_add frr_recirculation set_frr_recirculation_first_failure_loop_bit_0 1 0 0->5 => 0 0 
-#table_add frr_recirculation set_frr_recirculation_first_failure_loop_bit_1 0 1 0->5 => 0 0
 table_add frr_recirculation set_frr_recirculation_first_failure_loop_bit_0 1 0 0->5 0->0 20 0 => 0 0
 table_add frr_recirculation set_frr_recirculation_first_failure_loop_bit_1 0 1 0->0 0->5 20 20 => 0 0
 !
