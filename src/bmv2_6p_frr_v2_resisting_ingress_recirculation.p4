@@ -602,6 +602,7 @@ register<bit<24>>(3) dr_rg_first_failure_count_wr;
 
 
         ipv4_lpm.apply();
+//V1
 //        ecmp_hash_selector.apply();
         update_ecmp_hash.apply();
         ecmp_hash.apply();
@@ -611,7 +612,8 @@ register<bit<24>>(3) dr_rg_first_failure_count_wr;
         update_port_out_2.apply();
         update_port_out_1.apply();
         update_port_out_0.apply();
- //       update_default_path.apply();
+//V1
+//       update_default_path.apply();
 
         fowarding_tag_5.apply();
         fowarding_tag_4.apply();
@@ -619,6 +621,7 @@ register<bit<24>>(3) dr_rg_first_failure_count_wr;
         fowarding_tag_2.apply();
         fowarding_tag_1.apply();
         fowarding_tag_0.apply();
+//V1
 //        default_path.apply();
       
         port_status.apply();
