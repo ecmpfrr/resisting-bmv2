@@ -100,9 +100,6 @@
 
         actions = {
             set_add_ecmp_hash_loop_bit_1;
-//            set_add_ecmp_hash_loop_bit_1_ecmp_idx_range_1;
-//            set_add_ecmp_hash_loop_bit_1_ecmp_idx_range_2;
-//            set_add_ecmp_hash_loop_bit_1_ecmp_idx_range_3;
         }
 
         size = 64;
@@ -112,11 +109,9 @@
  action set_ecmp_hash(bit<32> idx) {
          bit<16> base_link;
          bit<32> max_link;
-        // bit<16> total_begin_path;
-        // bit<32> total_num_paths;
+
          rg_base_link_wr.read(base_link,idx);
          rg_max_link_wr.read(max_link,idx);
-       //  meta.r_num_paths = r_num_paths;
          hash(ig_md.ecmp_path_selector, HashAlgorithm.crc32,
                  base_link,     
                  {hdr.ipv4.src_addr,
@@ -482,11 +477,11 @@ register<bit<9>>(3) rg_port_out_0_wr;
 
    action set_fowarding_port_out_0_loop_bit_0(bit<32> idx) {
           hdr.ethernet.setValid();
-         hdr.ethernet.dst_addr = (bit<48>)ig_md.dst_id;
-         hdr.ethernet.ether_type = 0x800;
-         bit<9> port_out;
-         rg_port_out_0_wr.read(port_out,idx);
-         ig_intr_md.egress_spec = port_out;
+          hdr.ethernet.dst_addr = (bit<48>)ig_md.dst_id;
+          hdr.ethernet.ether_type = 0x800;
+          bit<9> port_out;
+          rg_port_out_0_wr.read(port_out,idx);
+          ig_intr_md.egress_spec = port_out;
       }
 
   table fowarding_tag_0 {
@@ -563,7 +558,7 @@ register<bit<24>>(3) dr_rg_first_failure_count_wr;
             hdr.frr.idx_port_down : range;
             ig_md.dst_id : exact;
             hdr.frr.dst_id : exact;
- //          ig_intr_md.ingress_port: range;
+
     }
 
         actions = {
@@ -587,7 +582,7 @@ register<bit<24>>(3) dr_rg_first_failure_count_wr;
         key = {
             ig_md.port_status_up_down : exact;
             hdr.frr.loop : exact;
-           // hdr.ethernet.ether_type: exact;
+
     }
 
         actions = {
@@ -631,8 +626,6 @@ register<bit<24>>(3) dr_rg_first_failure_count_wr;
       @atomic{
         frr_recirculation.apply();
         }
-
-      //  frr_no_recovery.apply();
 
 
 
