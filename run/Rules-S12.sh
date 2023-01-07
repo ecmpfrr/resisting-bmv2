@@ -22,7 +22,6 @@ register_write rg_default_path_wr 1 4
 register_write rg_default_path_wr 2 7
 
 
-#update_port_out_5.add_with_set_add_port_out_5(5,1)
 
 table_add update_port_out_2 set_add_port_out_2_loop_bit_1_add_255 2 1 20 => 1
 table_add update_port_out_2 set_add_port_out_2_loop_bit_1_add_255 1 1 20 => 1
@@ -32,9 +31,7 @@ table_add update_port_out_1 set_add_port_out_1_loop_bit_1 1 1 20 => 1
 table_add update_port_out_1 set_add_port_out_1_loop_bit_1 0 1 20 => 1
 
 table_add update_port_out_0 set_add_port_out_0_loop_bit_1 0 1 20 => 1
-#table_add update_port_out_3 set_add_port_out_3_loop_bit_1 2 1 => 1
-#table_add update_port_out_3 set_add_port_out_3_loop_bit_1 1 1 => 1
-#table_add update_port_out_3 set_add_port_out_3_loop_bit_1 0 1 => 1
+
 
 table_add update_port_out_2 set_add_port_out_2_loop_bit_1_add_255 2 1 10 => 0
 table_add update_port_out_2 set_add_port_out_2_loop_bit_1_add_255 1 1 10 => 0
@@ -73,14 +70,14 @@ table_add default_path set_default_path_loop_bit_0_ecmp_idx_range_1 255 0->2 0 2
 table_add fowarding_tag_2 set_fowarding_port_out_2_loop_bit_0 10 2 0 => 0
 table_add fowarding_tag_1 set_fowarding_port_out_1_loop_bit_0 10 1 0 => 0
 table_add fowarding_tag_0 set_fowarding_port_out_0_loop_bit_0 10 0 0 => 0
-#table_add default_path set_default_path_loop_bit_0 255 0 => 0
+
 table_add default_path set_default_path_loop_bit_0_ecmp_idx_range_1 255 0->2 0 10 => 0 0
 
 #S3
 table_add fowarding_tag_2 set_fowarding_port_out_2_loop_bit_0 30 2 0 => 2
 table_add fowarding_tag_1 set_fowarding_port_out_1_loop_bit_0 30 1 0 => 2
 table_add fowarding_tag_0 set_fowarding_port_out_0_loop_bit_0 30 0 0 => 2
-#table_add default_path set_default_path_loop_bit_0 255 0 => 0
+
 table_add default_path set_default_path_loop_bit_0_ecmp_idx_range_1 255 0->2 0 30 => 2 2
 
 
@@ -101,8 +98,7 @@ table_add port_status set_port_status_down 0 1 0x255 => 0
 
 table_set_default port_status drop_act
 
-#table_add frr_recirculation set_frr_recirculation_first_failure_loop_bit_0 1 0 =>
-#table_add frr_recirculation set_frr_recirculation_first_failure_loop_bit_1 0 1 =>
+
 table_add frr_recirculation set_frr_recirculation_first_failure_loop_bit_0 1 0 0->2 0->0 10 0 => 0 0
 table_add frr_recirculation set_frr_recirculation_first_failure_loop_bit_1 0 1 0->0 0->2 10 10 => 0 0
 !
@@ -114,7 +110,6 @@ table_add frr_recirculation set_frr_recirculation_first_failure_loop_bit_0 1 0 0
 table_add frr_recirculation set_frr_recirculation_first_failure_loop_bit_1 0 1 0->0 0->2 30 30 => 2 2
 
 
-#table_add frr_no_recovery set_frr_no_recovery_loop_bit_0 0 0 =>
 
 !V1
 !act_prof_create_group hash_path_selector
