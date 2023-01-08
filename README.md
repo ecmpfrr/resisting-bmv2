@@ -20,6 +20,8 @@ git clone https://github.com/danielbl1000/P4-RESISTING-bmv2.git
 To compile RESISTING code:
 ```
 cd P4-RESISTING-bmv2/src/
+```
+```
 ./p4c_bmv2_6p_frr_v2_resisting.sh
 ```
 <img src="/figs/fig02.jpg" alt="Compiling">
