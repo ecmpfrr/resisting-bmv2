@@ -27,5 +27,17 @@ cd P4-RESISTING-bmv2/src/
 ```
 <img src="/figs/fig02.JPG" alt="Compiling">
 
+### RUNNING
+To start the RESISTING with a mininet topology:
+```
+cd P4-RESISTING-bmv2/run/
+```
+```
+./run_MN_Top_v1.sh
+```
+<img src="/figs/fig03.JPG" alt="Running01">
+.........................................
+.........................................
+<img src="/figs/fig04.JPG" alt="Running02">
 
 
