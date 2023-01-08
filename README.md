@@ -45,7 +45,7 @@ cd P4-RESISTING-bmv2/run/
 Inside the `run` folder, run `./Add_Rules_S1_S2_S3_S11_S12.sh`
 <img src="/figs/fig05.JPG" alt="Add_rules">
 ### Sending traffic 
-Inside the mininet cli, send packets from host h1 to h2 and h3 e.g. Ping or IPERF 
+Inside the mininet cli, run `ping` or `iperf` to send packets from host h1 to h2 and h3
 <img src="/figs/fig06.JPG" alt="Add_rules">
 
 
