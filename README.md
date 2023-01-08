@@ -17,6 +17,7 @@ clone P4-RESISTING-bmv2
 git clone https://github.com/danielbl1000/P4-RESISTING-bmv2.git
 ```
 <img src="/figs/fig01.jpg" alt="Clone">
+
 To compile RESISTING code:
 ```
 cd P4-RESISTING-bmv2/src/
