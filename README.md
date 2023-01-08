@@ -16,7 +16,7 @@ clone P4-RESISTING-bmv2
 ```
 git clone https://github.com/danielbl1000/P4-RESISTING-bmv2.git
 ```
-<img src="/figs/fig01.jpg" alt="Clone">
+<img src="/figs/fig01.JPG" alt="Clone">
 
 To compile RESISTING code:
 ```
@@ -25,7 +25,7 @@ cd P4-RESISTING-bmv2/src/
 ```
 ./p4c_bmv2_6p_frr_v2_resisting.sh
 ```
-<img src="/figs/fig02.jpg" alt="Compiling">
+<img src="/figs/fig02.JPG" alt="Compiling">
 
 
 
