@@ -51,4 +51,11 @@ Inside the mininet cli, run `ping` or `iperf` to send packets from host h1 to h2
 
 <img src="/figs/fig06.JPG" alt="Add_rules">
 
+### Link Failures
+The main point here is show ingress and egress registers (Fwd and FRR) working, dealing with multiple failures without interruption of traffic between hosts 
+Check S1 Registers: inside the `run` folder, run `./Sh-Regs-all.sh`
+<img src="/figs/fig07.JPG" alt="fwd">
+<img src="/figs/fig08.JPG" alt="max_path">
+<img src="/figs/fig09.JPG" alt="frr">
+
 
