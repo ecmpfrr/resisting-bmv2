@@ -36,9 +36,9 @@ cd P4-RESISTING-bmv2/run/
 ./run_MN_Top_v1.sh
 ```
 <img src="/figs/fig03.JPG" alt="Running01">
-`.........................................`
 
 `.........................................`
+
 <img src="/figs/fig04.JPG" alt="Running02">
 
 
