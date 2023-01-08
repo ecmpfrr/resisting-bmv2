@@ -11,4 +11,18 @@ This repository contains the P4 based implementation of RESISTING for BMv2 and r
 ### Network Topology 
 <img src="top-spine-leaf.jpg" alt="Topologia Spine-Leaf">
 
-### Installation
+### Installation and Compiling
+clone P4-RESISTING-bmv2
+```
+git clone https://github.com/danielbl1000/P4-RESISTING-bmv2.git
+```
+<img src="/figs/fig01.jpg" alt="Clone">
+To compile RESISTING code:
+```
+cd P4-RESISTING-bmv2/src/
+./p4c_bmv2_6p_frr_v2_resisting.sh
+```
+<img src="/figs/fig02.jpg" alt="Compiling">
+
+
+
