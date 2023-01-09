@@ -9,7 +9,7 @@ This repository contains the P4 based implementation of RESISTING for BMv2 and r
 * Send packets to the running RESISTING using mininet and testing the FRR ECMP mechanism running link failures
 
 ### Network Topology 
-<img src="top-spine-leaf.jpg" alt="Topologia Spine-Leaf">
+<img src="top-spine-leaf.jpg" alt="Topologia Spine-Leaf"  width="550" height="400"/>
 
 ### Installation and Compiling
 clone P4-RESISTING-bmv2
