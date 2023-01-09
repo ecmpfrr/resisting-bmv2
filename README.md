@@ -52,10 +52,36 @@ Inside the mininet cli, run `ping` or `iperf` to send packets from host h1 to h2
 <img src="/figs/fig06.JPG" alt="Add_rules">
 
 ### Link Failures
+
 The main point here is show ingress and egress registers (Fwd and FRR) working, dealing with multiple failures without interruption of traffic between hosts 
+
 Check S1 Registers: inside the `run` folder, run `./Sh-Regs-all.sh`
+
 <img src="/figs/fig07.JPG" alt="fwd">
 <img src="/figs/fig08.JPG" alt="max_path">
 <img src="/figs/fig09.JPG" alt="frr">
 
+Before failures, inside the mininet cli, run specific ping (h1 -> h2 sec ip) to deal all ECMP Links during the failures: `h1 ping 20.0.0.15`
+
+<img src="/figs/fig10.JPG" alt="ping">
+
+Inside the `run` folder, run that command to setup ports status down: P1, P2, P3, P4 and P5 
+```
+./run_S1_failures-link-0-1-2-3-4-p1-p2-p3-p4-p5-Down.sh
+```
+<img src="/figs/fig12.JPG" alt="portdown">
+
+`.........................................`
+
+<img src="/figs/fig11.JPG" alt="linksdown">
+
+Check again S1 Registers: inside the `run` folder, run `./Sh-Regs-all.sh`
+
+<img src="/figs/fig13.JPG" alt="fwd=6p">
+
+<img src="/figs/fig14.JPG" alt="onelink">
+
+<img src="/figs/fig15.JPG" alt="frr=6">
+
+<img src="/figs/fig16.JPG" alt="no pkt loss">
 
