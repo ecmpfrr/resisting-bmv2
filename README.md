@@ -65,7 +65,7 @@ Before failures, inside the mininet cli, run specific ping (h1 -> h2 sec ip) to 
 
 <img src="/figs/fig10.JPG" alt="ping">
 
-Inside the `run` folder, run that command to setup ports status down: P1, P2, P3, P4 and P5 
+Inside the `run` folder, run that command to setup port status down: P1, P2, P3, P4 and P5 
 ```
 ./run_S1_failures-link-0-1-2-3-4-p1-p2-p3-p4-p5-Down.sh
 ```
