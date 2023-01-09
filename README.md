@@ -73,7 +73,7 @@ Inside the `run` folder, run that command to setup port status down: P1, P2, P3,
 
 `.........................................`
 
-<img src="/figs/fig11.jpg" alt="linksdown">
+<img src="/figs/fig11.jpg" alt="linksdown" width="200" height="250"/>
 
 Check again S1 Registers: inside the `run` folder, run `./Sh-Regs-all.sh`
 
