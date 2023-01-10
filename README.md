@@ -81,7 +81,7 @@ All ports were excluded into the forwarding registers, except the port P6.
 
 <img src="/figs/fig13.JPG" alt="fwd=6p">
 
-we saw just one ECMP link active in the maximum number of links. 
+we saw just one ECMP link active in the maximum number of links register. 
 
 <img src="/figs/fig14.JPG" alt="onelink">
 
