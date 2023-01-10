@@ -85,7 +85,7 @@ we saw just one ECMP link active in the maximum number of links register.
 
 <img src="/figs/fig14.JPG" alt="onelink">
 
-All ports were excluded in FRR registers, except the port P6.
+All ports were excluded into the FRR registers, except the port P6.
 
 <img src="/figs/fig15.JPG" alt="frr=6">
 
@@ -93,3 +93,4 @@ we didn't see packet loss in the ping result.
 
 <img src="/figs/fig16.JPG" alt="no pkt loss">
 
+For a more detailed about the subject, see the RESISTING article.
