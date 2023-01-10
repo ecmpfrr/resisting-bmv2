@@ -5,8 +5,8 @@ The RESISTING is a new FRR-ECMP mechanism for P4 programmable switches, this rep
 ### Quick Start:
 * Compile the P4 RESISITING for bmv2 using the `p4c` compiler
 * Execute the RESISTING program using the mininet with simple_switch software switch  
-* Add table and register entries to the running the RESISTING program
-* Send packets to the running RESISTING using mininet and testing the FRR ECMP mechanism running link failures
+* Add entry rules to tables and registers to control communication into the switches
+* For test the fast reroute mechanism from links, send traffic and apply link failures in the environment
 
 ### Network Topology 
 <img src="top-spine-leaf.jpg" alt="Topologia Spine-Leaf"  width="550" height="400"/>
