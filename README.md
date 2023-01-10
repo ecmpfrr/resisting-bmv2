@@ -1,6 +1,6 @@
 # P4-RESISTING-bmv2
 
-This repository contains the P4 based implementation of RESISTING for BMv2 and running scripts.
+The RESISTING is a new FRR-ECMP mechanism for P4 programmable switches, this repository contains the P4  implementation for behavioral model version 2 (BMv2) and running scripts.
 
 ### Quick Start:
 * Compile the P4 RESISITING for bmv2 using the `p4c` compiler
