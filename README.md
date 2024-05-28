@@ -1,12 +1,12 @@
 # P4-RESISTING-bmv2
 
-The RESISTING is a new FRR-ECMP mechanism for P4 programmable switches, this repository contains the P4  implementation for behavioral model version 2 (BMv2) and running scripts.
+The RESISTING is a new FRR-ECMP mechanism for P4 programmable switches. This repository contains the P4 implementation for the Behavioral Model version 2 (BMv2) and running scripts
 
 ### Quick Start:
-* Compile the P4 RESISITING for bmv2 using the `p4c` compiler.
-* Execute the RESISTING program using the mininet with simple_switch software switch.  
-* Add entry rules to tables and registers to control communication into the switches.
-* For test the fast reroute mechanism from links, send traffic and apply link failures in the environment.
+* Compile the P4 RESISTING for BMv2 using the `p4c` compiler.
+* Execute the RESISTING program using Mininet with the `simple_switch` software switch.  
+* Add entry rules to tables and registers to control communication within the switches.
+* To test the fast reroute mechanism for links, send traffic and apply link failures in the environment.
 
 ### Network Topology 
 <img src="top-spine-leaf.jpg" alt="Topologia Spine-Leaf"  width="550" height="400"/>
@@ -47,13 +47,13 @@ Inside the `run` folder, run `./Add_Rules_S1_S2_S3_S11_S12.sh`.
 <img src="/figs/fig05.JPG" alt="Add_rules">
 
 ### Sending traffic 
-Inside the mininet cli, run `ping` or `iperf` to send packets from host h1 to h2 and h3.
+Inside the Mininet CLI, run `ping` or `iperf` to send packets from host h1 to hosts h2 and h3.
 
 <img src="/figs/fig06.JPG" alt="Add_rules">
 
 ### Link Failures
  
-The main point here is show the forward and FRR registers into the ingress and egress pipeline working and the RESISTING repairing multiple link failures without interruption of traffic between hosts.
+The main point here is to show the forward and FRR registers in the ingress and egress pipelines working, and the RESISTING mechanism repairing multiple link failures without interruption of traffic between hosts.
 
 Check S1 Registers: inside the `run` folder, run `./Sh-Regs-all.sh`
 
@@ -61,7 +61,7 @@ Check S1 Registers: inside the `run` folder, run `./Sh-Regs-all.sh`
 <img src="/figs/fig08.JPG" alt="max_path">
 <img src="/figs/fig09.JPG" alt="frr">
 
-Before apply link failures, inside the mininet cli, run specific ping (h1 -> h2 sec ip) to deal all ECMP Links during link failures: `h1 ping 20.0.0.15`.
+Before applying link failures, inside the Mininet CLI, run a specific ping (h1 -> h2 secondary IP) to utilize all ECMP links during link failures: `h1 ping 20.0.0.15`.
 
 <img src="/figs/fig10.JPG" alt="ping">
 
@@ -77,20 +77,20 @@ Inside the `run` folder, run that command to setup port status down: P1, P2, P3,
 
 Check again S1 Registers: inside the `run` folder, run `./Sh-Regs-all.sh`
 
-All ports were excluded into the forwarding registers, except the port P6.
+All ports were excluded from the forwarding registers, except for port P6.
 
 <img src="/figs/fig13.JPG" alt="fwd=6p">
 
-we saw just one ECMP link active in the maximum number of links register. 
+We observed only one ECMP link active in the maximum number of links register.
 
 <img src="/figs/fig14.JPG" alt="onelink">
 
-All ports were excluded into the FRR registers, except the port P6.
+All ports were excluded from the FRR registers, except for port P6.
 
 <img src="/figs/fig15.JPG" alt="frr=6">
 
-we didn't see packet loss in the ping result.
+We observed no packet loss in the ping results.
 
 <img src="/figs/fig16.JPG" alt="no pkt loss">
 
-For a more detailed about the subject, see the RESISTING article.
+For more detailed information about the subject, refer to the RESISTING article.
